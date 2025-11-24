@@ -1,0 +1,30 @@
+$color-blue: #009ba8;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey-white: #0d0c0d;
+$color-light-white: #c7c7c7;
+
+$font-family-main: "Epilogue", sans-serif;
+$font-weight-bold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$heading1-size: 60px;
+$heading2-size: 40px;
+$heading3-size: 38px;
+$text-main-size: 14px;
+$text-secondary-size: 18px;
+$text-small-size: 12px;
+$text-secondary-small-size: 9px;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-style($size, $weight: $font-weight-regular, $color: $color-white) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

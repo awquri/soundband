@@ -1,0 +1,42 @@
+.about-us {
+  padding: 5.125rem 0;
+  color: $color-white;
+  overflow: hidden;
+
+  &__text-block {
+    display: flex;
+    margin: 0;
+  }
+
+  &__title {
+    @include text-style($heading2-size, $font-weight-bold, $color-white);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.0375rem; 
+    display: flex;
+    flex: 1 1 250px;
+  }
+
+  &__text {
+    @include text-style($text-main-size, $font-weight-light);
+    margin-bottom: 2.5rem; 
+    display: flex;
+    flex: 1 1 400px;
+    letter-spacing: -0.3px;
+    line-height: 1.26;
+    margin-right: 43px;
+  }
+
+  .text-varient {
+    flex: 1 1 350px;
+    margin-right: 28px;
+  }
+
+  &__image {
+    max-width: 100%;
+    width: 55.75rem; 
+    max-height: 100%;
+    height: 31.25rem; 
+    float: right;
+    clear: right;
+  }
+}

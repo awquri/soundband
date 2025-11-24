@@ -1,0 +1,107 @@
+.header {
+  position: relative;
+  padding-top: 24px;
+  min-height: 789px;
+  background: #000;
+  overflow: hidden;
+  background: url('../img/main/blocks.png') no-repeat center top;
+  background-size: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/main/blocks.png') center/cover no-repeat;
+    transform: scale(clamp(1, 1 + (100vw - 1440px) / 15000, 1.12));
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__link {
+    @include text-style($text-main-size, $font-weight-regular, $color-white);
+    text-decoration: none;
+    text-align: center;
+    margin-right: 50px;
+
+    &__variant {
+      margin-right: 70px;
+    }
+  }
+
+  &__link:last-child {
+    margin-right: 0;
+  }
+
+  &__logo {
+    margin-right: 5rem; 
+    margin-left: 0;
+    background-color: transparent;
+  }
+
+  &__spacer {
+    flex-grow: 1;
+  }
+
+  &__button-tel {
+    color: $color-white;
+    font-weight: $font-weight-regular;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 18px 17px;
+    background-color: $color-blue;
+    border-radius: 0.5rem;
+  }
+    
+
+  &__text-block {
+    margin:75px 0 50px;
+    justify-content: space-between;
+  }
+
+  &__h1 {
+    @include text-style($heading1-size, $font-weight-bold, $color-white);
+    letter-spacing: -0.15rem;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  &__text {
+    @include text-style($text-main-size, $font-weight-light, $color-white);
+    white-space: pre-line;
+    letter-spacing: -0.01625rem; 
+    line-height: 1.125rem; 
+    margin-right: 0.3125rem;
+    margin-top: 57px;
+    margin-bottom: 117px;
+  }
+
+  &__button-shop {
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 23px 31px 21px;
+    background-color: $color-blue;
+    border-radius: 0.5rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-white;
+    padding: 0.625rem;
+    cursor: pointer;
+  }
+}

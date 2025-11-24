@@ -1,0 +1,72 @@
+.footer {
+  padding: 102px 0 32px;
+  background-color: $color-black;
+  color: $color-white;
+
+  &__logo {
+    margin-bottom: 27px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__social-link {
+    display: none;
+  }
+
+  &__networks {
+    display: flex;
+    gap: 16px;
+    margin-left: 47px;
+  }
+
+  &__phone {
+    @include text-style($text-secondary-size, $font-weight-regular, $color-white);
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  &__address {
+    @include text-style($text-secondary-size, $font-weight-regular, $color-white);
+    text-decoration: none;
+    letter-spacing: -0.36px;
+    line-height: 24px;
+    margin-bottom: 199px;
+  }
+
+  &__link {
+    @include text-style($text-secondary-size, $font-weight-regular, $color-white);
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+  }
+
+  &__patent {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    @include text-style($text-main-size, $font-weight-regular, $color-light-white);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    opacity: 0.5;
+
+    &-variant {
+      @include text-style($text-main-size, $font-weight-regular, $color-light-white);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+      margin-right: 16px;
+      opacity: 0.5;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
